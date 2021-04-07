@@ -12,7 +12,8 @@
     <label for="pilihan">Pilih Algoritma</label>
     <select name="tipe" id="pilihan">
         <option value="DDA">DDA</option>
-        <option value="Bressenham">Bressenham</optison>
+        <option value="Bressenham">Bressenham</option>
+        <option value="BressenhamLingkaran">Mid Point</option>
     </select>
     <label for="x1">X1</label>
     <input type="number" name="x1" id="x1">
@@ -22,6 +23,8 @@
     <input type="number" name="x2" id="x2">
     <label for="y2">Y2</label>
     <input type="number" name="y2" id="y2">
+    <label for="r">Jari-jari</label>
+    <input type="number" name="r" id="r">
     <button type="submit">Submit</button>
 </form>
     

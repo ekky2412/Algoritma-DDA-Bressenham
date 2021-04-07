@@ -14,6 +14,8 @@
         include "dda.php";
     } else if ($_GET['tipe'] == "Bressenham") {
         include "bressenham.php";
+    } else if($_GET['tipe'] == "BressenhamLingkaran"){
+        include "bressenhamLingkaran.php";
     }
     ?>
     <script>
