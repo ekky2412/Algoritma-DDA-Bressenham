@@ -59,6 +59,8 @@ $p = 1 - $_GET['r'];
             <td><?= $p ?></td>
             
         <?php
+            circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
+
             $x++;
             if ($p < 0) {
                 echo "<td> Pk + 2x<sub>k+1</sub> + 1  </td>";
@@ -69,7 +71,7 @@ $p = 1 - $_GET['r'];
                 $p = $p + 2 * ($x - $y) + 1;
             }
 
-            circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
+            
             ?>
             <td><?= $x ?></td>
             <td><?= $y ?></td>
