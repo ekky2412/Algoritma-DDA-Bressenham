@@ -50,7 +50,7 @@ $p = 1 - $_GET['r'];
     </tr>
         <?php
 
-        while ($x < $y) {
+        while ($x <= $y) {
             ?>
             <tr>
             <?php
