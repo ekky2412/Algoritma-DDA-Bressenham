@@ -50,7 +50,7 @@ $p = 1 - $_GET['r'];
     </tr>
         <?php
 
-        while ($x <= $y) {
+        while ($x < $y) {
             ?>
             <tr>
             <?php
@@ -81,5 +81,6 @@ $p = 1 - $_GET['r'];
             <?php
             $iterasi++;
         }
+        circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
         ?>
 </table>
