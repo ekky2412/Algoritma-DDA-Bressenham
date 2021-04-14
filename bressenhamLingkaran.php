@@ -51,13 +51,6 @@ $p = 1 - $_GET['r'];
             ?>
             <tr>
             <?php
-            $x++;
-            if ($p < 0) {
-                $p = $p + 2 * $x + 1;
-            } else {
-                $y--;
-                $p = $p + 2 * ($x - $y) + 1;
-            }
         ?>
             <td><?= $iterasi ?></td>
             <td><?= $p ?></td>
@@ -66,6 +59,14 @@ $p = 1 - $_GET['r'];
             <td><?= $x * 2 ?></td>
             <td><?= $y * 2 ?></td>
         <?php
+            $x++;
+            if ($p < 0) {
+                $p = $p + 2 * $x + 1;
+            } else {
+                $y--;
+                $p = $p + 2 * ($x - $y) + 1;
+            }
+            
             circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
             ?>
             </tr>
