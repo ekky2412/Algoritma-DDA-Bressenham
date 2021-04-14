@@ -34,12 +34,15 @@ $p = 1 - $_GET['r'];
     <thead>
         <th>k</th>
         <th>pk</th>
+        <th>Rumus</th>
         <th>xk+1</th>
         <th>yk+1</th>
         <th>2xk+1</th>
         <th>2yk+1</th>
+        
     </thead>
     <tr>
+        <td></td>
         <td></td>
         <td></td>
         <td><?= $x ?></td>
@@ -54,21 +57,24 @@ $p = 1 - $_GET['r'];
         ?>
             <td><?= $iterasi ?></td>
             <td><?= $p ?></td>
+            
+        <?php
+            $x++;
+            if ($p < 0) {
+                echo "<td> Pk + 2x<sub>k+1</sub> + 1  </td>";
+                $p = $p + 2 * $x + 1;
+            } else {
+                echo "<td> Pk + 2x<sub>k+1</sub> + 1  </td>";
+                $y--;
+                $p = $p + 2 * ($x - $y) + 1;
+            }
+
+            circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
+            ?>
             <td><?= $x ?></td>
             <td><?= $y ?></td>
             <td><?= $x * 2 ?></td>
             <td><?= $y * 2 ?></td>
-        <?php
-            $x++;
-            if ($p < 0) {
-                $p = $p + 2 * $x + 1;
-            } else {
-                $y--;
-                $p = $p + 2 * ($x - $y) + 1;
-            }
-            
-            circlePlotPoints($xCenter, $yCenter, $x, $y, $k, $nilai);
-            ?>
             </tr>
             <?php
             $iterasi++;
